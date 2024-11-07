@@ -1,0 +1,27 @@
+/* styles.css */
+.background-image-container {
+    position: relative; /* Allows the ::before pseudo-element to be positioned absolutely */
+    border: 2px solid blue;
+    max-height: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem; /* 1.5 rem padding, equivalent to p-6 in Tailwind */
+  }
+  
+  .background-image-container::before {
+    content: "";
+    position: absolute; /* Covers the entire parent div */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("/image/kamran.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: white;
+    opacity: 0.5; /* Set the opacity here */
+    z-index: 0; /* Ensures it stays behind the content */
+  }
+  
